@@ -1,0 +1,26 @@
+<div class="product">
+  <div>
+    <h3>
+      <a [title]="product.name + ' details'">
+        {{ product.name }}
+      </a>
+    </h3>
+  </div>
+  <div *ngIf="product.description">
+    <p>
+      Description: {{ product.description }}
+    </p>
+  </div>
+  <div *ngIf="product.price">
+    <p>Price: {{product.price}}</p>
+    <app-product-alerts
+      [product]="product"
+      (notify)="onNotify()">
+    </app-product-alerts>
+  </div>
+  <div>
+    <p>Count: {{product.count}}</p>
+  </div>
+  <app-product-color-list [productColors]="product.colorModel" (changeCount)="recalculate($event)"></app-product-color-list>
+  <button (click)="share()"> Share</button>
+</div>
