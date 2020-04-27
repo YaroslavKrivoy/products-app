@@ -17,6 +17,7 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.product.count = 0;
     for (let i = 0; i < this.product.colorModel.length; i++) {
       this.product.count += this.product.colorModel[i].count;
     }
