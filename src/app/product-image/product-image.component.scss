@@ -1,0 +1,13 @@
+.image__container{
+  width: 90%;
+  margin: 0 auto;
+  height: 255px;
+
+  .image__item{
+    display: block;
+    margin: 0 auto;
+    width: 255px;
+    height: inherit;
+    border: 1px solid #cccccc;
+  }
+}

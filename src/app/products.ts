@@ -40,7 +40,7 @@ export const products: Product[] = [
   {
     name: 'Phone Standard',
     price: 299,
-    description: '',
+    description: 'A large phone with one of the best screens',
     count: null,
     colorModel: [
       {color: Colors.Black, count: 1},

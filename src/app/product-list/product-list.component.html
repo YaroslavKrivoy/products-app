@@ -1,5 +1,14 @@
 <h2>Products</h2>
-
-<div *ngFor="let product of products">
-  <app-product [product]="product"></app-product>
+<hr>
+<button (click)="switchToggle()">Toggle products</button>
+<hr>
+<div *ngIf="toggle; else noProducts" class="product__container">
+  <div *ngFor="let product of products" class="product__item">
+    <app-product [product]="product"></app-product>
+  </div>
 </div>
+
+<ng-template #noProducts>
+  <p>Product cards are hidden!</p>
+</ng-template>
+

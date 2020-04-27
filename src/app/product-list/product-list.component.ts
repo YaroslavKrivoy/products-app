@@ -10,10 +10,15 @@ export class ProductListComponent implements OnInit {
 
   public products = products;
 
+  toggle = true;
+
   constructor() {
   }
 
   ngOnInit(): void {
   }
 
+  switchToggle(): void {
+    this.toggle = !this.toggle;
+  }
 }
