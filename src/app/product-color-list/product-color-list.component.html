@@ -1,5 +1,6 @@
 <div class="colorsProduct" fxLayout="row" fxLayoutAlign="space-around center">
   <mat-chip-list aria-label="Fish selection" *ngFor="let color of productColors">
-    <app-product-color [productColorItem]="color" (changeCount)="recalculateProductModelCount($event)"></app-product-color>
+    <app-product-color [productColorItem]="color" (changeCount)="recalculateProductModelCount($event)"
+                       (changeImages)="changeImage($event)"></app-product-color>
   </mat-chip-list>
 </div>

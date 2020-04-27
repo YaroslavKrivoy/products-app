@@ -6,6 +6,10 @@
       </a>
     </h3>
   </div>
+  <div>
+    <app-product-image [imageUrl]="url">
+    </app-product-image>
+  </div>
   <div *ngIf="product.description">
     <p>
       Description: {{ product.description }}
@@ -21,6 +25,7 @@
   <div>
     <p>Count: {{product.count}}</p>
   </div>
-  <app-product-color-list [productColors]="product.colorModel" (changeCount)="recalculate($event)"></app-product-color-list>
+  <app-product-color-list [productColors]="product.colorModel" (changeCount)="recalculate($event)"
+                          (changeImages)="changeImage($event)"></app-product-color-list>
   <button (click)="share()"> Share</button>
 </div>

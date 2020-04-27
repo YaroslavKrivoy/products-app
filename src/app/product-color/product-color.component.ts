@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ColorModel} from '../core/models/Product';
 
 export enum ValueChangeCount {
@@ -17,8 +17,10 @@ export class ProductColorComponent implements OnInit {
   productColorItem: ColorModel;
 
   @Output() changeCount = new EventEmitter<ValueChangeCount>();
+  @Output() changeImages = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
@@ -33,6 +35,10 @@ export class ProductColorComponent implements OnInit {
       this.changeCount.emit(ValueChangeCount.Minus);
       this.productColorItem.count--;
     }
+  }
+
+  changeImage(color: string) {
+    this.changeImages.emit(color);
   }
 
   getColor() {

@@ -12,6 +12,7 @@ import {ValueChangeCount} from '../product-color/product-color.component';
 export class ProductColorListComponent implements OnInit {
   @Input() productColors: ColorModel[];
   @Output() changeCount = new EventEmitter<ValueChangeCount>();
+  @Output() changeImages = new EventEmitter();
 
   constructor() {
   }
@@ -21,5 +22,9 @@ export class ProductColorListComponent implements OnInit {
 
   recalculateProductModelCount(e) {
     this.changeCount.emit(e);
+  }
+
+  changeImage(e) {
+    this.changeImages.emit(e);
   }
 }

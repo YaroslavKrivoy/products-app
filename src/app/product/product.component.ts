@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Product} from '../core/models/Product';
 import {ValueChangeCount} from '../product-color/product-color.component';
 
@@ -11,12 +11,16 @@ export class ProductComponent implements OnInit {
 
   @Input() product: Product;
 
-  constructor() { }
+  url: string;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
     for (let i = 0; i < this.product.colorModel.length; i++) {
       this.product.count += this.product.colorModel[i].count;
     }
+    this.url = this.product.imageModel[0].url;
   }
 
   recalculate(e) {
@@ -25,6 +29,10 @@ export class ProductComponent implements OnInit {
     } else {
       this.product.count--;
     }
+  }
+
+  changeImage(e) {
+    this.url = (this.product.imageModel.find(image => image.color === e)).url;
   }
 
   share() {
