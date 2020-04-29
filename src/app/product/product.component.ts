@@ -37,6 +37,7 @@ export class ProductComponent implements OnInit {
   }
 
   share() {
+    // it is better to use https://material.angular.io/components/snack-bar/overview
     window.alert('The product has been shared!');
   }
 

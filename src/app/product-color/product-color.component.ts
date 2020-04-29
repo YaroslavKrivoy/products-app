@@ -41,6 +41,8 @@ export class ProductColorComponent implements OnInit {
     this.changeImages.emit(color);
   }
 
+  // productColorItem.color could be used directly in html,
+  // no need to create separate function for this purpose (as an option)
   getColor() {
     return this.productColorItem.color;
   }
