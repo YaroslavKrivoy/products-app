@@ -4,6 +4,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  // better to use &__item in this case instead of .product__item {
+  // the same in other scss
   .product__item {
     width: 33%;
   }

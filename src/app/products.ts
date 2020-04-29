@@ -1,3 +1,7 @@
+// This file need to be moved to core/mock_data for example
+// I would combine colorModel with imageModel  {color: Colors.Black, count: 2, url: 'some_url'}
+// imageModel could make sense if there are several image of Phone XL Colors.Black for example and
+// id need to be used in addition to string color identifier
 import {Product} from './core/models/Product';
 import {Colors} from './core/models/Colors';
 
