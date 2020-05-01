@@ -1,7 +1,7 @@
 <h2>Products</h2>
-<hr>
+<mat-divider></mat-divider>
 <button (click)="switchToggle()">Toggle products</button>
-<hr>
+<mat-divider></mat-divider>
 <div *ngIf="toggle; else noProducts" class="product__container">
   <div *ngFor="let product of products" class="product__item">
     <app-product [product]="product"></app-product>

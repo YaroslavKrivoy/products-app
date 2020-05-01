@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ColorModel} from '../core/models/Product';
+import {ColorModel} from '../core/models/product';
 
 export enum ValueChangeCount {
   Plus = 'PLUS',
@@ -41,7 +41,4 @@ export class ProductColorComponent implements OnInit {
     this.changeImages.emit(color);
   }
 
-  getColor() {
-    return this.productColorItem.color;
-  }
 }

@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ColorModel} from '../core/models/Product';
+import {ColorModel} from '../core/models/product';
 import {ValueChangeCount} from '../product-color/product-color.component';
 
 

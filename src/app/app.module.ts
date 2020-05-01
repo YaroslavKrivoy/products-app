@@ -12,7 +12,11 @@ import {ProductComponent} from './product/product.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatChipsModule} from '@angular/material/chips';
 import {ProductImageComponent} from './product-image/product-image.component';
-import {A11yModule} from "@angular/cdk/a11y";
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -28,9 +32,12 @@ import {A11yModule} from "@angular/cdk/a11y";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FlexLayoutModule,
     MatChipsModule,
-    A11yModule
+    MatDividerModule,
+    MatSnackBarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

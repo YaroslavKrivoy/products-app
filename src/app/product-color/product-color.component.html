@@ -1,5 +1,5 @@
 <div class="details" fxLayout="column" fxLayoutAlign="center center">
-  <mat-chip [ngStyle]="{'background-color': getColor()}" (click)="changeImage(productColorItem.color)"></mat-chip>
+  <mat-chip [ngStyle]="{'background-color': this.productColorItem.color }" (click)="changeImage(productColorItem.color)"></mat-chip>
   <h2>{{productColorItem.count}}</h2>
   <div fxLayout="row">
     <button (click)="onClickPlus()" class="button__plus">+</button>

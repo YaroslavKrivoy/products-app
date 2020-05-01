@@ -1,5 +1,5 @@
-import {Colors} from './Colors';
-import {Images} from './Images';
+import {Colors} from './colors';
+import {Images} from './images';
 
 export interface Product {
   name: string;
@@ -7,10 +7,10 @@ export interface Product {
   description?: string;
   count: number;
   colorModel: ColorModel[];
-  imageModel: Images[];
 }
 
 export interface ColorModel {
   color: Colors;
   count: number;
+  imageModel: Images;
 }

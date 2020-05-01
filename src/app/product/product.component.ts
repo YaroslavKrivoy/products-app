@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Product} from '../core/models/Product';
+import {Product} from '../core/models/product';
 import {ValueChangeCount} from '../product-color/product-color.component';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-product',
@@ -13,7 +15,7 @@ export class ProductComponent implements OnInit {
 
   url: string;
 
-  constructor() {
+  constructor(private snackBar: MatSnackBar) {
   }
 
   ngOnInit(): void {
@@ -21,7 +23,7 @@ export class ProductComponent implements OnInit {
     for (let i = 0; i < this.product.colorModel.length; i++) {
       this.product.count += this.product.colorModel[i].count;
     }
-    this.url = this.product.imageModel[0].url;
+    this.url = this.product.colorModel[0].imageModel.url;
   }
 
   recalculate(e) {
@@ -33,15 +35,21 @@ export class ProductComponent implements OnInit {
   }
 
   changeImage(e) {
-    this.url = (this.product.imageModel.find(image => image.color === e)).url;
+    this.url = (this.product.colorModel.find(image => image.color === e)).imageModel.url;
   }
 
   share() {
-    window.alert('The product has been shared!');
+    this.snackBar.open('The product has been shared!', 'act', {
+      duration: 2000,
+      panelClass: 'snack-bar'
+    });
   }
 
   onNotify() {
-    window.alert('You will be notified when the product goes on sale');
+    this.snackBar.open('You will be notified when the product goes on sale', 'act', {
+      duration: 2000,
+      panelClass: 'snack-bar'
+    });
   }
 
 }
