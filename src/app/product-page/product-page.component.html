@@ -1,0 +1,16 @@
+<div class="card">
+  <h2>{{ product.name }}</h2>
+  <div class="card-image">
+    <app-product-image [imageUrl]="product.colorModel[0].imageModel.url">
+    </app-product-image>
+  </div>
+  <div class="card-description">
+    <p>{{ product.description }}</p>
+  </div>
+</div>
+
+<p><a [routerLink]="['/products', product.id, 'comment']">Show comments form</a></p>
+
+<div class="comments">
+  <router-outlet></router-outlet>
+</div>

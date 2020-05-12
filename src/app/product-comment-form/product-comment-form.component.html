@@ -1,0 +1,16 @@
+<form class="card" [formGroup]="form" (ngSubmit)="submit()">
+
+  <div class="form-control">
+    <label>Author</label>
+    <input type="text" formControlName="author" placeholder="Author...">
+    <div class="validation"></div>
+  </div>
+
+  <div class="form-control">
+    <label>Text</label>
+    <input type="text" formControlName="text" placeholder="Text...">
+    <div class="validation"></div>
+  </div>
+
+  <button class="btn" type="submit" [disabled]="form.invalid || form.pending">Отправить</button>
+</form>
